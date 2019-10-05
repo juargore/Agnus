@@ -1,0 +1,75 @@
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/vistaDebateCV"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    card_view:cardBackgroundColor="@color/cardview_shadow_end_color"
+    card_view:cardElevation="0dp">
+
+    <!-- Receives the actual messages. -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="3dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:paddingTop="3dp">
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/txtNombreDebate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Hora"
+                android:textAlignment="viewStart"
+                android:textColor="#0D3863"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtFechaDebate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Aula"
+                android:textAlignment="textEnd"
+                android:textColor="#385723"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtTextoDebate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearLayout3"
+            android:layout_toEndOf="@+id/barraLateral"
+            android:layout_toRightOf="@+id/barraLateral"
+            android:autoLink="web"
+            android:fontFamily="sans-serif"
+            android:text="Materia"
+            android:textColor="#000"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="false"
+            android:layout_below="@+id/txtTextoDebate"
+            android:layout_marginTop="8dp"
+            android:background="#0D3863"
+            android:orientation="horizontal"></LinearLayout>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

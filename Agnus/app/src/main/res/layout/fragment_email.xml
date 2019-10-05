@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipeRefrescarEmail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/fondo_gral"
+        android:theme="@style/Theme.AppCompat.Light">
+
+        <TextView
+            android:id="@+id/txtNoCorreos"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_margin="30dp"
+            android:gravity="center_vertical"
+            android:text="Por el momento usted no tiene correos"
+            android:textAlignment="center"
+            android:textColor="#307095"
+            android:textSize="22sp"
+            android:visibility="gone" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fbEmail"
+            app:backgroundTint="#307095"
+            app:fabSize="normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="12dp"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/pen_icon"
+            android:theme="@style/Theme.AppCompat" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:text="Bandeja de:" />
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/textView"
+                    android:layout_alignEnd="@+id/etCodigo"
+                    android:layout_alignLeft="@+id/textView"
+                    android:layout_alignRight="@+id/etCodigo"
+                    android:layout_alignStart="@+id/textView">
+
+                    <ImageView
+                        android:id="@+id/imageView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/spinner_bandejas"
+                        android:layout_alignRight="@+id/spinner_bandejas"
+                        android:layout_alignTop="@+id/spinner_bandejas"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="3dp"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:scaleType="centerInside"
+                        android:src="@mipmap/icono_drop" />
+
+                    <Spinner
+                        android:id="@+id/spinner_bandejas"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_input_text_login"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="2dp" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:text="Filtrar por:" />
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/textView"
+                    android:layout_alignEnd="@+id/etCodigo"
+                    android:layout_alignLeft="@+id/textView"
+                    android:layout_alignRight="@+id/etCodigo"
+                    android:layout_alignStart="@+id/textView">
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/spinner_filtro"
+                        android:layout_alignRight="@+id/spinner_filtro"
+                        android:layout_alignTop="@+id/spinner_filtro"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="3dp"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:scaleType="centerInside"
+                        android:src="@mipmap/icono_drop" />
+
+                    <Spinner
+                        android:id="@+id/spinner_filtro"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_input_text_login"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="15dp"
+                        android:paddingTop="2dp" />
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvListaBandeja"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignEnd="@+id/linearLayout5"
+            android:layout_alignLeft="@+id/linearLayout5"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/linearLayout5"
+            android:layout_alignStart="@+id/linearLayout5"
+            android:layout_below="@+id/linearLayout5" />
+
+
+    </RelativeLayout>
+</android.support.v4.widget.SwipeRefreshLayout>

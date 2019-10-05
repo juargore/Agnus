@@ -1,0 +1,44 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_gral"
+    tools:context="com.proj.agnus.tabs.Tab_Lunes">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical"
+        android:weightSum="5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"></LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/listaHorariosSab"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4">
+
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtNoHS"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_margin="30dp"
+        android:gravity="center_vertical"
+        android:text="No hay horario capturado"
+        android:textAlignment="center"
+        android:textColor="#307095"
+        android:textSize="22sp"
+        android:visibility="gone" />
+
+</FrameLayout>

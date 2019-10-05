@@ -1,0 +1,118 @@
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/listaHorariosAlumno"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    card_view:cardBackgroundColor="@color/cardview_shadow_end_color"
+    card_view:cardElevation="0dp">
+
+    <!-- Receives the actual messages. -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="3dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:paddingTop="3dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_alignParentBottom="false"
+            android:layout_below="@+id/lyBase"
+            android:layout_marginTop="8dp"
+            android:background="#0D3863"
+            android:orientation="horizontal"></LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/barraLateral"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtHoraHorario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Hora"
+                android:textAlignment="viewStart"
+                android:textColor="#C55A11"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtAulaHorario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Aula"
+                android:textAlignment="textEnd"
+                android:textColor="#385723"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtMateriaHorario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearLayout3"
+            android:layout_toEndOf="@+id/barraLateral"
+            android:layout_toRightOf="@+id/barraLateral"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif"
+            android:maxLines="2"
+            android:text="Materia"
+            android:textColor="#0D3863"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:id="@+id/lyBase"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="false"
+            android:layout_below="@+id/txtMateriaHorario"
+            android:layout_toEndOf="@+id/barraLateral"
+            android:layout_toRightOf="@+id/barraLateral"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtProfeClaveHorario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="Profe / Clave"
+                android:textAlignment="viewStart"
+                android:textColor="#000"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/txtGrupoHorario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Grupo"
+                android:textAlignment="textEnd"
+                android:textColor="#000"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/barraLateral"
+            android:layout_width="3dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/lyBase"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="5dp"
+            android:background="#0D3863"
+            android:orientation="vertical"></LinearLayout>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

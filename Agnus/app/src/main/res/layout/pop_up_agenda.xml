@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/layContenedorAgenda"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/fondo_gral"
+            android:layout_alignBottom="@+id/layFF"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <LinearLayout
+            android:id="@+id/layFF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_toEndOf="@+id/barraLateral1"
+            android:layout_toRightOf="@+id/barraLateral1"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            android:paddingTop="8dp">
+
+            <TextView
+                android:id="@+id/txtActividadPop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="SEGUIMIENTO JARDIN BOTANICO"
+                android:textColor="#0D3863"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#0D3863"
+                android:orientation="horizontal"></LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtTDescripcionPop"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Descripción"
+                        android:textColor="#0D3863"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtRDescripcionPop"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:id="@+id/txtTLugarPop"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Lugar"
+                        android:textColor="#0D3863"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtRLugarPop"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:id="@+id/txtTResponsablePop"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Responsable"
+                        android:textColor="#0D3863"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtRResponsablePop"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:id="@+id/txtTDepartamentoPop"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Departamento"
+                        android:textColor="#0D3863"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtRDepartamentoPop"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:id="@+id/txtTGrupoPop"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Grupo"
+                        android:textColor="#0D3863"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtRGrupoPop"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:textColor="#000000" />
+                </LinearLayout>
+            </ScrollView>
+
+            <LinearLayout
+                android:id="@+id/layCon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical"
+                android:paddingBottom="3dp">
+
+                <LinearLayout
+                    android:id="@+id/layFechaInAgenda"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="3dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="15dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/calendar_icon1" />
+
+                    <TextView
+                        android:id="@+id/txtFechaInPop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="08/14/2017"
+                        android:textColor="#385723"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtHoraInPop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="12:00 AM"
+                        android:textColor="#385723"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layFechaFinAgenda"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageView7"
+                        android:layout_width="15dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/calendar_icon2" />
+
+                    <TextView
+                        android:id="@+id/txtFechaFinPop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="01/31/2018"
+                        android:textColor="#C55A11"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtHoraFinPop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="11:59 PM"
+                        android:textColor="#C55A11"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/barraLateral1"
+            android:layout_width="7dp"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/layFF"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:background="#0D3863"
+            android:orientation="vertical"></LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

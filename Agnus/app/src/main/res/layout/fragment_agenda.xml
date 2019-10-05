@@ -1,0 +1,77 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_gral"
+    android:theme="@style/Theme.AppCompat.Light">
+
+    <TextView
+        android:id="@+id/txtNoEventosAgenda"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="30dp"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:text="No existen eventos para este periodo de tiempo"
+        android:textAlignment="center"
+        android:textColor="#307095"
+        android:textSize="22sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/txtSP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tabsHorario"
+        android:layout_marginTop="15dp"
+        android:text="Seleccione periodo"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textSize="16sp"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/rLSpinnerA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtSP"
+        android:layout_marginBottom="50dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_alignBottom="@+id/spinnerPeriodosA"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="8dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/icono_drop" />
+
+        <Spinner
+            android:id="@+id/spinnerPeriodosA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_input_text_login"
+            android:paddingBottom="4dp"
+            android:paddingLeft="5dp"
+            android:paddingTop="4dp" />
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvListaAgenda"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignEnd="@+id/rLSpinnerA"
+        android:layout_alignLeft="@+id/rLSpinnerA"
+        android:layout_alignRight="@+id/rLSpinnerA"
+        android:layout_alignStart="@+id/rLSpinnerA"
+        android:layout_below="@+id/rLSpinnerA" />
+
+</RelativeLayout>

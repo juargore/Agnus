@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/layPopUpLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp">
+
+        <ImageView
+            android:id="@+id/imageView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/layFF"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/fondo_gral" />
+
+        <LinearLayout
+            android:id="@+id/layFF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_toEndOf="@+id/barraLateral1"
+            android:layout_toRightOf="@+id/barraLateral1"
+            android:orientation="vertical"
+            android:paddingBottom="5dp"
+            android:paddingTop="8dp">
+
+            <TextView
+                android:id="@+id/txtTituloPopUpLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="SELECCIONE SU PLANTEL"
+                android:textAlignment="center"
+                android:textColor="#0D3863"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#0D3863"
+                android:orientation="horizontal"></LinearLayout>
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="15dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="Por favor, seleccione del siguiente listado, el plantel que corresponde a sus credenciales"
+                android:textAlignment="center" />
+
+            <RelativeLayout
+                android:id="@+id/rLSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtAlumno_Uac_Asis"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="5dp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/ivFlechitaLogin"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_alignBottom="@+id/spinnerPopUpLogin"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="8dp"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/icono_drop" />
+
+                <Spinner
+                    android:id="@+id/spinnerPopUpLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_input_text_login"
+                    android:paddingBottom="4dp"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="4dp" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btnPopUpLogin"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:background="#0D3863"
+                android:text="Aceptar"
+                android:textColor="#FFF" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/barraLateral1"
+            android:layout_width="4dp"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/layFF"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:background="#0D3863"
+            android:orientation="vertical"></LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

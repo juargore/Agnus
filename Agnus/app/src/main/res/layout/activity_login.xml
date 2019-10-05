@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_gral"
+    tools:context="com.proj.agnus.seguridad.Login1">
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:text="¡Bienvenido!"
+        android:textColor="#000"
+        android:textSize="22sp" />
+
+    <EditText
+        android:id="@+id/etCodigo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/shape_input_text_login"
+        android:drawableLeft="@mipmap/userlogin"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="Código de usuario"
+        android:inputType="text"
+        android:paddingBottom="4dp"
+        android:paddingLeft="5dp"
+        android:paddingTop="4dp"
+        android:textColor="#0D3863"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/etCodigo"
+        android:layout_alignLeft="@+id/etCodigo"
+        android:layout_alignStart="@+id/etCodigo"
+        android:layout_marginTop="5dp"
+        android:text="Código"
+        android:textColor="#000" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etCodigo"
+        android:layout_alignStart="@+id/etCodigo"
+        android:layout_below="@+id/etCodigo"
+        android:text="Contraseña"
+        android:textColor="#000" />
+
+    <EditText
+        android:id="@+id/etContrasena"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/etCodigo"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignRight="@+id/etCodigo"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_below="@+id/textView2"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/shape_input_text_login"
+        android:drawableLeft="@mipmap/userpassword"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:paddingBottom="4dp"
+        android:paddingLeft="5dp"
+        android:paddingTop="4dp"
+        android:textColor="#0D3863"
+        android:textSize="14sp" />
+    <!--2939274 -->
+
+
+    <CheckBox
+        android:id="@+id/chBx_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etContrasena"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="20dp"
+        android:checked="true"
+        android:text="Mantener sesión iniciada"
+        android:textAlignment="center"
+        android:textColor="#424242" />
+
+    <LinearLayout
+        android:id="@+id/layPoliticas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/chBx_login"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/chBx_politicas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="He leído y acepto el " />
+
+        <TextView
+            android:id="@+id/txtPoliticas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aviso de Privacidad"
+            android:textColor="#0D3863"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnIngresar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/etContrasena"
+        android:layout_alignLeft="@+id/etContrasena"
+        android:layout_alignRight="@+id/etContrasena"
+        android:layout_alignStart="@+id/etContrasena"
+        android:layout_below="@+id/layPoliticas"
+        android:background="#0D3863"
+        android:text="Ingresar"
+        android:textColor="#FFF" />
+
+    <TextView
+        android:id="@+id/txtRecuperarContrasena"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnIngresar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:text="Recuperar contraseña"
+        android:textColor="?attr/actionModeSplitBackground" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView"
+        android:layout_alignEnd="@+id/etCodigo"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignRight="@+id/etCodigo"
+        android:layout_alignStart="@+id/textView">
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/relativeLayout"
+        android:layout_alignLeft="@+id/relativeLayout"
+        android:layout_alignStart="@+id/relativeLayout"
+        android:textColor="#000" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView4"
+        android:layout_below="@+id/textView5"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:paddingBottom="20dp"
+        android:paddingTop="30dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/icono_agnus2" />
+
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/relativeLayout"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

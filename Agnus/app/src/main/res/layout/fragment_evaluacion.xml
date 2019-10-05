@@ -1,0 +1,212 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/fondo_gral"
+    android:theme="@style/Theme.AppCompat.Light">
+
+
+    <TextView
+        android:id="@+id/txtNoCursosEvaluacion"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="30dp"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:text="No existen cursos registrados para este usuario"
+        android:textAlignment="center"
+        android:textColor="#307095"
+        android:textSize="22sp"
+        android:visibility="gone" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPagerEvaluacion"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linearLayoutHH" />
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabsModulosEvaluacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0D3863"
+        android:elevation="6dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:tabGravity="center"
+        app:tabIndicatorColor="#307095"
+        app:tabIndicatorHeight="5dp"
+        app:tabMode="scrollable"
+        app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutHH"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tabsModulosEvaluacion"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/layHijosEvaluacion"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/txtHijoEvaluacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tabsModulosEvaluacion"
+                android:text="Nombre del alumno"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="14sp"
+                android:visibility="visible" />
+
+            <RelativeLayout
+                android:id="@+id/rLaySpinnerHijos"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_alignBottom="@+id/spinnerHijosEvaluacion"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="8dp"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/icono_drop" />
+
+                <Spinner
+                    android:id="@+id/spinnerHijosEvaluacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_input_text_login"
+                    android:paddingBottom="4dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="4dp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layAgrupacionEvaluacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:id="@+id/layCicloEvaluacion"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtCicloEvaluacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ciclo"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="14sp"
+                    android:visibility="visible" />
+
+                <RelativeLayout
+                    android:id="@+id/rLaySpinnerCiclo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/txtAlumno_Uac_Asis"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_alignBottom="@+id/spinnerCicloEvaluacion"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="8dp"
+                        android:scaleType="centerInside"
+                        android:src="@mipmap/icono_drop" />
+
+                    <Spinner
+                        android:id="@+id/spinnerCicloEvaluacion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_input_text_login"
+                        android:paddingBottom="4dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="4dp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layGrupoEvaluacion"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtGrupoEvaluacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Grupo"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="14sp"
+                    android:visibility="visible" />
+
+                <RelativeLayout
+                    android:id="@+id/rLaySpinnerGrupo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/txtAlumno_Uac_Asis"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_alignBottom="@+id/spinnerGrupoEvaluacion"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="8dp"
+                        android:scaleType="centerInside"
+                        android:src="@mipmap/icono_drop" />
+
+                    <Spinner
+                        android:id="@+id/spinnerGrupoEvaluacion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_input_text_login"
+                        android:paddingBottom="4dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="4dp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

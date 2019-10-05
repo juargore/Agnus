@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_gral"
+    android:paddingBottom="7dp"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    android:paddingTop="7dp"
+    android:theme="@style/Theme.AppCompat.Light">
+
+    <LinearLayout
+        android:id="@+id/layPrin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <RelativeLayout
+            android:id="@+id/rlOcultar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/textView"
+            android:layout_alignEnd="@+id/etCodigo"
+            android:layout_alignLeft="@+id/textView"
+            android:layout_alignRight="@+id/etCodigo"
+            android:layout_alignStart="@+id/textView"
+            android:layout_weight="4">
+
+            <Spinner
+                android:id="@+id/spinner_tipo_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_input_text_white"
+                android:paddingBottom="2dp"
+                android:paddingLeft="5dp"
+                android:paddingTop="2dp" />
+
+            <ImageView
+                android:id="@+id/ivDownArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/spinner_tipo_email"
+                android:layout_alignRight="@+id/spinner_tipo_email"
+                android:layout_alignTop="@+id/spinner_tipo_email"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="3dp"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:scaleType="centerInside"
+                android:src="@mipmap/icono_drop" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ivSendEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/icon_send_envelope" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <com.proj.agnus.activity.ContactsCompletionView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layPrin"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/shape_input_text_white"
+        android:padding="4dp"
+        android:textColor="#000"
+        android:hint="Destinatarios"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/etAsuntoEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/searchView"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/shape_input_text_white"
+        android:ems="10"
+        android:hint="Asunto"
+        android:inputType="textPersonName"
+        android:padding="4dp"
+        android:textColor="#0D3863"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/etAsuntoEmail"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/etMensajeEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/shape_input_text_white"
+                    android:ems="10"
+                    android:gravity="top|left"
+                    android:hint="Escriba aqui su mensaje..."
+                    android:inputType="textMultiLine"
+                    android:padding="4dp"
+                    android:textColor="#0D3863"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

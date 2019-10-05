@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Agnus</string>
+    <string name="app_name1">Agnus1</string>
+    <string name="recuperar_contrasena">"Para recuperar tu contraseña, ingresa tu código y correo electrónico"</string>
+    <string name="bandeja_entrada">Si el correo no aparece en la bandeja de entrada, revisa en los correos no deseados</string>
+    <string name="actualizar_contrasena">"Ingrese los siguientes datos para cambiar la contraseña:"</string>
+
+    <!-- Items del menu lateral -->
+    <string-array name="array_titulos_menu_lateral">
+        <item>Noticias</item>
+        <item>Notificaciones</item>
+        <item>Calendario</item>
+        <item>Agenda</item>
+        <item>Horarios</item>
+        <item>Evaluación</item>
+        <item>E-mail</item>
+        <item>Asistencias</item>
+        <item>Ajustes</item>
+        <item>Salir</item>
+    </string-array>
+
+    <!-- Iconos del menu lateral (en orden) -->
+    <array name="array_iconos_menu_lateral">
+        <item>@mipmap/icon_noticias</item>
+        <item>@mipmap/icon_notificaciones</item>
+        <item>@mipmap/icon_calendario</item>
+        <item>@mipmap/icon_agenda</item>
+        <item>@mipmap/icon_horario</item>
+        <item>@mipmap/icon_evaluacion</item>
+        <item>@mipmap/icon_email</item>
+        <item>@mipmap/icon_asistencias</item>
+        <item>@mipmap/icon_ajustes</item>
+        <item>@mipmap/icon_salir</item>
+    </array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_email">Email</string>
+    <string name="title_activity_ajustes__detalle">Ajustes_Detalle</string>
+</resources>

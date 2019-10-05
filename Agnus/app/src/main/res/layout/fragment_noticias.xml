@@ -1,0 +1,30 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/fondo_gral"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:id="@+id/txtNoNoticias"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_margin="30dp"
+        android:gravity="center_vertical"
+        android:text="No existen noticias por el momento"
+        android:textAlignment="center"
+        android:textColor="#307095"
+        android:textSize="22sp"
+        android:visibility="gone" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/listadoNoticias"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:numColumns="auto_fit">
+
+    </android.support.v7.widget.RecyclerView>
+
+</FrameLayout>

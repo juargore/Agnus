@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_gral"
+    tools:context="com.proj.agnus.seguridad.Recuperar_Contrasena1">
+
+    <EditText
+        android:id="@+id/etEmailRC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/shape_input_text_login"
+        android:drawableLeft="@mipmap/useremail"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="Correo electrónico"
+        android:inputType="textEmailAddress"
+        android:paddingBottom="4dp"
+        android:paddingLeft="5dp"
+        android:paddingTop="4dp"
+        android:textColor="#0D3863"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etEmailRC"
+        android:layout_alignStart="@+id/etEmailRC"
+
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="5dp"
+        android:text="Código"
+        android:textColor="#000" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etEmailRC"
+        android:layout_alignStart="@+id/etEmailRC"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_marginTop="5dp"
+        android:text="Email"
+        android:textColor="#000" />
+
+    <LinearLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etEmailRC"
+        android:layout_alignRight="@+id/etEmailRC"
+        android:orientation="vertical"
+        android:layout_below="@+id/textView">
+
+        <EditText
+            android:id="@+id/etCodigoRC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView2"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/shape_input_text_login"
+            android:drawableLeft="@mipmap/userlogin"
+            android:drawablePadding="10dp"
+            android:ems="10"
+            android:hint="Código de usuario"
+            android:inputType="textEmailAddress"
+            android:paddingBottom="4dp"
+            android:paddingLeft="5dp"
+            android:paddingTop="4dp"
+            android:textColor="#0D3863"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView"
+        android:layout_alignEnd="@+id/etEmailRC"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignRight="@+id/etEmailRC"
+        android:layout_alignStart="@+id/textView"
+        android:layout_marginBottom="10dp"
+        android:text="@string/recuperar_contrasena"
+        android:textAlignment="center"
+        android:textColor="#000" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Recuperar Contraseña"
+        android:textColor="#000"
+        android:textSize="22sp" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView7"
+        android:layout_below="@+id/textView8"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="5dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="15dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/icono_agnus2" />
+
+    <Button
+        android:id="@+id/btnRecuperarContrasena"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/relativeLayout"
+        android:layout_alignLeft="@+id/relativeLayout"
+        android:layout_alignRight="@+id/relativeLayout"
+        android:layout_alignStart="@+id/relativeLayout"
+        android:layout_below="@+id/etEmailRC"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:background="#0D3863"
+        android:text="Recuperar Contraseña"
+        android:textColor="#FFF" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/btnRecuperarContrasena"
+        android:layout_alignLeft="@+id/btnRecuperarContrasena"
+        android:layout_alignRight="@+id/btnRecuperarContrasena"
+        android:layout_alignStart="@+id/btnRecuperarContrasena"
+        android:layout_below="@+id/btnRecuperarContrasena"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="@string/bandeja_entrada"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/txtCancelarRC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView9"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="Cancelar"
+        android:textColor="?attr/actionModeSplitBackground" />
+
+
+</RelativeLayout>

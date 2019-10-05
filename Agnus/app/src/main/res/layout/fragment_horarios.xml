@@ -1,0 +1,88 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:theme="@style/Theme.AppCompat.Light">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tabsHorario" />
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabsHorario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0D3863"
+        android:elevation="6dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:tabGravity="center"
+        app:tabIndicatorColor="#307095"
+        app:tabIndicatorHeight="5dp"
+        app:tabMode="scrollable"
+        app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget" />
+
+    <TextView
+        android:id="@+id/txtAlumno_Uac_Asis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tabsHorario"
+        android:layout_marginTop="15dp"
+        android:text="Nombre del alumno"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textSize="16sp"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/rLSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtAlumno_Uac_Asis"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/ivFlechitaHijos"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_alignBottom="@+id/spinnerHijos"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="8dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/icono_drop" />
+
+        <Spinner
+            android:id="@+id/spinnerHijos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_input_text_login"
+            android:paddingBottom="4dp"
+            android:paddingLeft="5dp"
+            android:paddingTop="4dp" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/etNombreCiclo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtAlumno_Uac_Asis"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_input_text_login"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="textPersonName"
+        android:paddingBottom="4dp"
+        android:paddingTop="4dp"
+        android:text="Sin ciclo escolar asignado"
+        android:textAlignment="center"
+        android:textColor="#0D3863"
+        android:visibility="visible" />
+
+</RelativeLayout>

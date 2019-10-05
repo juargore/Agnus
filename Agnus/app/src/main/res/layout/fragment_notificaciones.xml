@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipeRefrescarNotificaciones"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/fondo_gral"
+        android:gravity="center_horizontal">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/listaNotificaciones"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:id="@+id/txtNoNotificaciones"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_margin="30dp"
+            android:gravity="center_vertical"
+            android:text="No existen notificaciones por el momento"
+            android:textAlignment="center"
+            android:textColor="#307095"
+            android:textSize="22sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</android.support.v4.widget.SwipeRefreshLayout>
